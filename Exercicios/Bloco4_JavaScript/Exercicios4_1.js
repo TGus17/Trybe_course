@@ -1,15 +1,9 @@
-let num1 = 10;
-let num2 = 12;
-let num3 = 9;
+let num = 0;
 
-if (num1 > num2) {
-    maior = num1;
+if (num > 0) {
+    console.log("Positive!");
+} else if (num < 0) {
+    console.log("Negative!");
 } else {
-    maior = num2;
-}
-
-if (maior > num3) {
-    console.log(maior);
-} else {
-    console.log(num3);
+    console.log("Zero!");
 }
