@@ -1,9 +1,5 @@
-let num = 0;
+let lado1 = 180;
+let lado2 = 50;
+let lado3 = 0;
 
-if (num > 0) {
-    console.log("Positive!");
-} else if (num < 0) {
-    console.log("Negative!");
-} else {
-    console.log("Zero!");
-}
+(lado1 + lado2 + lado3) == 180 ? console.log("true") : console.log("Erro! Lados não correspondem a um triângulo!");
