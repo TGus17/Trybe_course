@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+.header h1 {
+    background-color: green;
+    line-height: 40px;
+}
+
+img {
+    width: 300px;
+    position: relative;
+}
+
+p {
+    width: 90%;
+    text-align: justify;
+    text-indent: 40px;
+}
+
+h3 {
+    text-align: center;
+    background-color: green;
+    color: white;
+}
+
+footer.rodape {    
+    border-top: 2px solid green;
+}
+
+footer.rodape p {
+    text-align: center;
+}
