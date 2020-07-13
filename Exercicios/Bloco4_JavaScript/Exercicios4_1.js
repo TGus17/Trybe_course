@@ -1,13 +1,9 @@
-let num1 = 6;
-let num2 = 20;
-let num3 = 30;
+let custoProduto = 10;
+let valorVenda = 20;
+let lucro = (valorVenda - (custoProduto * 1.2)) * 1000;
 
-isOdd = false;
-
-if ((num1 % 2 != 0) || (num2 % 2 != 0) || (num3 % 2 != 0)){
-  isOdd = true;
+if ((custoProduto > 0) && (valorVenda > 0)) {
+  console.log("Seu lucro total foi de " + lucro);
 } else {
-  isOdd = false;
+  console.log("Mensagem de erro.");
 }
-
-console.log(isOdd);
