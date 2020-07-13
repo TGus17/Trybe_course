@@ -1,6 +1,6 @@
-let peca = "casa";
+let peca = "CAVALO";
 
-switch (peca) {
+switch (peca.toLowerCase()) {
   case "cavalo":
     console.log(peca + " -> Movimento em L");
     break;
@@ -11,7 +11,7 @@ switch (peca) {
 		console.log(peca + " -> Ande na diagonal");
 		break;
 	case "rainha":
-		console.log(peca + " -> Anda em qualer direção");
+		console.log(peca+ " -> Anda em qualer direção");
 		break;
 	case "torre":
 		console.log(peca + " -> Anda em movimentos perpendiculares");
