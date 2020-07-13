@@ -1,24 +1,17 @@
-let peca = "CAVALO";
+let porcentagem = 101;
 
-switch (peca.toLowerCase()) {
-  case "cavalo":
-    console.log(peca + " -> Movimento em L");
-    break;
-  case "peao":
-    console.log(peca + " -> Ande uma casa a frente");
-		break;
-	case "bispo":
-		console.log(peca + " -> Ande na diagonal");
-		break;
-	case "rainha":
-		console.log(peca+ " -> Anda em qualer direção");
-		break;
-	case "torre":
-		console.log(peca + " -> Anda em movimentos perpendiculares");
-		break;
-	case "rei":
-		console.log(peca + " -> Anda somente uma casa em torno de si");
-		break;
-	default:
-		console.log(peca + " -> Não é uma peça válida");    
-}
+if ((porcentagem < 0) || (porcentagem > 100)) {
+  console.log ("Nota inválida");
+} else if (porcentagem >= 90) {
+    console.log("Nota A");
+	} else if (porcentagem >= 80) {
+    console.log("Nota B");
+  } else if (porcentagem >= 70) {
+    console.log("Nota C");
+  } else if (porcentagem >= 60) {
+    console.log("Nota D");
+  } else if (porcentagem >= 50) {
+    console.log("Nota E");
+  } else {
+    console.log("Nota F");
+  }
