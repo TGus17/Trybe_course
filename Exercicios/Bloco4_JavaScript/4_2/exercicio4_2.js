@@ -1,14 +1,9 @@
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
-let position = 0;
+let novo = [];
 
-for (let i = 1; i < numbers.length; i += 1) {
-	for (let j = 0; j < i; j += 1) {
-		if (numbers[i] > numbers[j]) {
-			position = numbers[i];
-			numbers[i] = numbers[j];
-			numbers[j] = position;
-		}
-	}
+for (let i = 0; i < (numbers.length - 1); i += 1) {
+	novo[i] = numbers[i]*numbers[i+1];
 }
+novo.push(numbers[(numbers.length-1)] * 2);
 
-console.log(numbers);
+console.log(novo);
