@@ -1,10 +1,14 @@
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
-let menor = 100;
+let position = 0;
 
-for (let indice = 0; indice < numbers.length; indice += 1){
-    if (numbers[indice] < menor) {
-        menor = numbers[indice];
-    }
+for (let i = 1; i < numbers.length; i += 1) {
+	for (let j = 0; j < i; j += 1) {
+		if (numbers[i] < numbers[j]) {
+			position = numbers[i];
+			numbers[i] = numbers[j];
+			numbers[j] = position;
+		}
+	}
 }
 
-console.log("O menor valor do array é: " + menor);
+console.log(numbers);
