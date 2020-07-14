@@ -3,7 +3,7 @@ let position = 0;
 
 for (let i = 1; i < numbers.length; i += 1) {
 	for (let j = 0; j < i; j += 1) {
-		if (numbers[i] < numbers[j]) {
+		if (numbers[i] > numbers[j]) {
 			position = numbers[i];
 			numbers[i] = numbers[j];
 			numbers[j] = position;
