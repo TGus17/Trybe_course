@@ -7,4 +7,9 @@ for (let indice = 0; indice < numbers.length; indice += 1){
 }
 
 media = sum / (numbers.length);
-console.log("A média aritimética dos valores foi de: " + media);
+
+if (media > 20) {
+    console.log("Valor maior que 20.");
+} else {
+    console.log("Valor menor ou igual a 20");
+}
