@@ -7,3 +7,4 @@ for (let i = 0; i < (numbers.length - 1); i += 1) {
 novo.push(numbers[(numbers.length-1)] * 2);
 
 console.log(novo);
+console.log(numbers);
