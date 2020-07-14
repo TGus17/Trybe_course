@@ -1,6 +1,6 @@
 ## Repositório de exercícios
 
-### Esse repositório tem o intuito de listar os exercício ordenados por blocos e conteúdos feitos no curso da Trybe
+#### Esse repositório tem o intuito de listar os exercício ordenados por blocos e conteúdos feitos no curso da Trybe
 
 ## Bloco 3: HTML & CSS ✅
 <ul>
