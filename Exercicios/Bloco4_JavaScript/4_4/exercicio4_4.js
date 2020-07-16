@@ -5,8 +5,8 @@ let info = {
     recorrente: "Sim"
   };
 
-  //3. Faça um for/in que mostre todas as chaves do objeto.
+//4. Faça um novo for/in, mas agora mostre todos os valores das chaves do objeto.
 
-  for(let chave in info) {
-      console.log(chave);
-  }
+for(let chave in info) {
+  console.log(chave + ": " + info[chave]);
+}
