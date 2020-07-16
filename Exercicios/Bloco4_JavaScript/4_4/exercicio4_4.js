@@ -5,8 +5,19 @@ let info = {
     recorrente: "Sim"
   };
 
-//4. Faça um novo for/in, mas agora mostre todos os valores das chaves do objeto.
+//5. Agora, defina um segundo objeto com a mesma estrutura (as mesmas chaves) do primeiro e os seguintes valores: "Tio Patinhas", "Christmas on Bear Mountain, Dell's Four Color Comics #178", "O último MacPatinhas", "Sim".
 
-for(let chave in info) {
-  console.log(chave + ": " + info[chave]);
+let segundoObjeto = {
+	personagem: "Tio Patinhas",
+	origem: "Christmas on Bear Mountain, Dells Four Color Comics #178",
+	nota: "O último MacPatinhas",
+	recorrente: "Sim",
+};
+
+for (chave in info) {
+	if (info[chave] === segundoObjeto[chave]) {
+		console.log("Ambos recorrentes.")
+	} else {
+		console.log(info[chave] + " e " + segundoObjeto[chave]);
+	}	
 }
