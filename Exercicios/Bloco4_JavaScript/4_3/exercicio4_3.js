@@ -1,20 +1,28 @@
-let n = 8;
-let entradaLinha;
-let entradaColuna;
-let comecoColuna = n;
-let simbolo = "*";
-let inicioLinha = "";
+//4. Depois, faça uma pirâmide com n asteriscos de base:
 
-for (entradaLinha = 0; entradaLinha < n; entradaLinha += 1) {
-	for (entradaColuna = 1; entradaColuna <= n; entradaColuna += 1) {
-		if (entradaColuna < comecoColuna) {
-			inicioLinha += " ";
+let n = 11;
+let linha;
+let coluna;
+let metPiramide = ((n + 1) / 2);
+let linhaInteira = "";
+let simbolo = "*";
+let outuput = "";
+let input = " ";
+
+for (linha = 0; linha < (metPiramide - 1); linha += 1) {
+	for (coluna = 1; coluna <= n; coluna += 1) {
+		if ((coluna === (metPiramide - linha)) || (coluna === (metPiramide + linha))) {
+			outuput += simbolo;
 		} else {
-			inicioLinha += simbolo;
+			outuput += input;
 		}
 	}
-	console.log(inicioLinha);
-	inicioLinha = "";
-	comecoColuna -= 1;
+	console.log(outuput);
+	outuput = "";
 }
 
+for (index = 0; index < n; index += 1){
+	linhaInteira += simbolo;
+}
+
+console.log(linhaInteira);
