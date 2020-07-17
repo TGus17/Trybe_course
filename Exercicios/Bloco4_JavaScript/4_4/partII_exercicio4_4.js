@@ -1,24 +1,16 @@
-//1. Crie uma função que receba uma string e retorne true se for um palíndromo, ou false, se não for.
+//2. Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
 
 
-
-function verificaPalindromo (palavra) {
-	let verifica = 0;
-	if ((palavra.length % 2) === 0) {
-		console.log(false);
-	} else {
-		for (let index = 0; index < palavra.length; index++) {
-			if (palavra[index] === palavra[palavra.length - (index + 1)]) {
-				verifica += 1;
-			}
-		}
-		if (verifica == (palavra.length)) {
-			console.log(true);
-		} else {
-			console.log(false);
-		}	
-	}
+function verificaMaior (teste) {
+	let maior = 0;
+	let maiorIndice = 0;
+	
+	for (index in teste){		
+		if ((teste[index]) > maior) {
+			maior = teste[index];
+			maiorIndice = index;
+		} 
+	}	
+	console.log(maiorIndice);
 }
-
-verificaPalindromo("gato");
 
