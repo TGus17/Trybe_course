@@ -1,28 +1,16 @@
-//4. Depois, faça uma pirâmide com n asteriscos de base:
+//6. Faça um programa que diz se um número definido numa variável é primo ou não.
 
-let n = 7;
-let linha;
-let coluna;
-let metPiramide = ((n + 1) / 2);
-let linhaInteira = "";
-let simbolo = "*";
-let outuput = "";
-let input = " ";
+let n = 11;
+let nPrimo = 0;
 
-for (linha = 0; linha < (metPiramide - 1); linha += 1) {
-	for (coluna = 1; coluna <= n; coluna += 1) {
-		if ((coluna < (metPiramide - linha)) || (coluna > (metPiramide + linha))) {
-			outuput += input;
-		} else {
-			outuput += simbolo;
-		}
+for (index = 2; index < n; index +=1) {
+	if ((n % index) === 0) {
+		nPrimo += 1;
 	}
-	console.log(outuput);
-	outuput = "";
 }
 
-for (index = 0; index < n; index += 1){
-	linhaInteira += simbolo;
+if (nPrimo != 0) {
+	console.log("O número " + n + " não é primo!");
+} else {
+	console.log("O número " + n + " é primo!")
 }
-
-console.log(linhaInteira);
