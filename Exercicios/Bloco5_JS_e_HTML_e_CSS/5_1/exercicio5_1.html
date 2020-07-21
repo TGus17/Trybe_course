@@ -54,7 +54,7 @@
 		3. Crie uma função que mude a cor do quadrado vermelho para branco. - DONE!
 
 		4. Crie uma função que corrija o texto da tag <h1>. - DONE!
-		
+
 		5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
 		6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
 		*/
@@ -64,24 +64,29 @@
 		}
 		trocaTexto();
 
-    function trocaCor () {
-      let square = document.getElementsByClassName("main-content")[0];
+		function trocaCor() {
+			let square = document.getElementsByClassName("main-content")[0];
 			square.style.background = "rgb(76 , 164 , 109)";
 		}
-    trocaCor();
+		trocaCor();
 
-		function quadradoVermelho () {
+		function quadradoVermelho() {
 			let vermelho = document.getElementsByClassName("center-content")[0];
 			vermelho.style.background = "white";
 		}
 		quadradoVermelho();
 
-		function titleCorrect () {
+		function titleCorrect() {
 			let titulo = document.getElementsByClassName("title")[0];
 			titulo.innerHTML = "Exercício 5.1 - JavaScript"
 		}
 		titleCorrect();
 
+		function trocaP() {
+			let maiusculo = document.getElementsByTagName("p")[1];
+			maiusculo.innerHTML = maiusculo.innerHTML.toUpperCase();
+		}
+		trocaP();
 
 	</script>
 </body>
