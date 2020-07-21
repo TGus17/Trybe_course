@@ -2,15 +2,17 @@
 
 
 function verificaMaior (teste) {
-	let maior = 0;
-	let maiorIndice = 0;
+	let menor = 0;
+	let menorIndice = 1000;
 	
 	for (index in teste){		
-		if ((teste[index]) > maior) {
-			maior = teste[index];
-			maiorIndice = index;
+		if ((teste[index]) < menor) {
+			menor = teste[index];
+			menorIndice = index;
 		} 
 	}	
-	console.log(maiorIndice);
+	console.log(menorIndice);
 }
+
+verificaMaior([2, 4, 6, -7, 10, 0, -3]);
 
