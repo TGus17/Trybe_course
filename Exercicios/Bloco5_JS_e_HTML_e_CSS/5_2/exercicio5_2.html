@@ -73,6 +73,10 @@
       let paragraph = document.createElement("p");
       paragraph.innerHTML = "Aqui um texto de teste.";
       document.getElementsByClassName("center-content")[0].appendChild(paragraph);
+
+      let divLeft = document.createElement("div");
+      divLeft.className = "left-content";
+      document.querySelector(".main-content").appendChild(divLeft);
     </script>
   </body>
 </html>
