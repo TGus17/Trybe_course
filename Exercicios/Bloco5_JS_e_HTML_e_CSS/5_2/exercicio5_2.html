@@ -1,98 +1,135 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Exercício 5.2</title>
     <style>
-      div {
-        border-color: black;
-        border-style: solid;
-      }
+        div {
+            border-color: black;
+            border-style: solid;
+        }
 
-      .title {
-        text-align: center;
-      }
+        .title {
+            text-align: center;
+        }
 
-      .main-content {
-        background-color: yellow;
-      }
+        .main-content {
+            background-color: yellow;
+        }
 
-      .main-content .center-content {
-        background-color: red;
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-      }
+        .main-content .center-content {
+            background-color: red;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-      .main-content .center-content p {
-        font-style: italic;
-      }
+        .main-content .center-content p {
+            font-style: italic;
+        }
 
-      .main-content .left-content {
-        background-color: green;
-        width: 60%;
-        margin-left: 0;
-        margin-right: auto;
-      }
+        .main-content .left-content {
+            background-color: green;
+            width: 60%;
+            margin-left: 0;
+            margin-right: auto;
+        }
 
-      .main-content .left-content .small-image {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 100%;
-      }
+        .main-content .left-content .small-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 100%;
+        }
 
-      .main-content .right-content {
-        background-color: blue;
-        width: 60%;
-        margin-left: auto;
-        margin-right: 0;
-      }
+        .main-content .right-content {
+            background-color: blue;
+            width: 60%;
+            margin-left: auto;
+            margin-right: 0;
+        }
 
-      .main-content .description {
-        text-align: center;
-      }
+        .main-content .description {
+            text-align: center;
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <script>
         //1. Adicione h1
-      let titulo = document.createElement("h1");
-      titulo.innerHTML = "Exercício 5.2 - JavaScript DOM";
-      document.body.appendChild(titulo);
+        let titulo = document.createElement("h1");
+        titulo.innerHTML = "Exercício 5.2 - JavaScript DOM";
+        document.body.appendChild(titulo);
 
-      //2. Adicione div main-content
-      let divisao = document.createElement("div");
-      divisao.className = "main-content";
-      divisao.id = "divMain";
-      document.body.appendChild(divisao);
+        //2. Adicione div main-content
+        let divisao = document.createElement("div");
+        divisao.className = "main-content";
+        divisao.id = "divMain";
+        document.body.appendChild(divisao);
 
-      //3. Adicione div center-content
-      let divCenter = document.createElement("div");
-      divCenter.className = "center-content";
-      document.getElementById("divMain").appendChild(divCenter);
+        //3. Adicione div center-content
+        let divCenter = document.createElement("div");
+        divCenter.className = "center-content";
+        document.getElementById("divMain").appendChild(divCenter);
 
-      //4. Adicione tag p
-      let paragraph = document.createElement("p");
-      paragraph.innerHTML = "Aqui um texto de teste.";
-      document.getElementsByClassName("center-content")[0].appendChild(paragraph);
+        //4. Adicione tag p
+        let paragraph = document.createElement("p");
+        paragraph.innerHTML = "Aqui um texto de teste.";
+        document.getElementsByClassName("center-content")[0].appendChild(paragraph);
 
-      //5. Adicione div lef-content
-      let divLeft = document.createElement("div");
-      divLeft.className = "left-content";
-      document.querySelector(".main-content").appendChild(divLeft);
+        //5. Adicione div lef-content
+        let divLeft = document.createElement("div");
+        divLeft.className = "left-content";
+        document.querySelector(".main-content").appendChild(divLeft);
 
-      //6. Adicione div right-content
-      let divRight = document.createElement("div");
-      divRight.className = "right-content";
-      document.getElementsByClassName("main-content")[0].appendChild(divRight);
+        //6. Adicione div right-content
+        let divRight = document.createElement("div");
+        divRight.className = "right-content";
+        document.getElementsByClassName("main-content")[0].appendChild(divRight);
 
-      //7. Adicione imagem
-      let imagem = document.createElement("img");
-      imagem.src = "https://picsum.photos/200";
-      imagem.className = "small-image";
-      document.querySelector(".left-content").appendChild(imagem);
+        //7. Adicione imagem
+        let imagem = document.createElement("img");
+        imagem.src = "https://picsum.photos/200";
+        imagem.className = "small-image";
+        document.querySelector(".left-content").appendChild(imagem);
+
+        //8. Adicione uma lista não ordenada
+        let lista = document.createElement("ul");
+        let item1 = document.createElement("li");
+        let item2 = document.createElement("li");
+        let item3 = document.createElement("li");
+        let item4 = document.createElement("li");
+        let item5 = document.createElement("li");
+        let item6 = document.createElement("li");
+        let item7 = document.createElement("li");
+        let item8 = document.createElement("li");
+        let item9 = document.createElement("li");
+        let item10 = document.createElement("li");
+        item1.innerHTML = "um";
+        item2.innerHTML = "dois";
+        item3.innerHTML = "três";
+        item4.innerHTML = "quatro";
+        item5.innerHTML = "cinco";
+        item6.innerHTML = "seis";
+        item7.innerHTML = "sete";
+        item8.innerHTML = "oito";
+        item9.innerHTML = "nove";
+        item10.innerHTML = "dez";
+        document.querySelector(".right-content").appendChild(lista);
+        document.getElementsByClassName("right-content")[0].firstChild.appendChild(item1);
+        document.getElementsByClassName("right-content")[0].firstChild.appendChild(item2);
+        document.getElementsByClassName("right-content")[0].firstChild.appendChild(item3);
+        document.getElementsByClassName("right-content")[0].firstChild.appendChild(item4);
+        document.getElementsByClassName("right-content")[0].firstChild.appendChild(item5);
+        document.getElementsByClassName("right-content")[0].firstChild.appendChild(item6);
+        document.getElementsByClassName("right-content")[0].firstChild.appendChild(item7);
+        document.getElementsByClassName("right-content")[0].firstChild.appendChild(item8);
+        document.getElementsByClassName("right-content")[0].firstChild.appendChild(item9);
+        document.getElementsByClassName("right-content")[0].firstChild.appendChild(item10);
     </script>
-  </body>
+</body>
+
 </html>
