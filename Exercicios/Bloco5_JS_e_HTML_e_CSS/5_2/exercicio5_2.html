@@ -73,28 +73,28 @@
         //3. Adicione div center-content
         let divCenter = document.createElement("div");
         divCenter.className = "center-content";
-        document.getElementById("divMain").appendChild(divCenter);
+        divisao.appendChild(divCenter);
 
         //4. Adicione tag p
         let paragraph = document.createElement("p");
         paragraph.innerHTML = "Aqui um texto de teste.";
-        document.getElementsByClassName("center-content")[0].appendChild(paragraph);
+        divCenter.appendChild(paragraph);
 
         //5. Adicione div lef-content
         let divLeft = document.createElement("div");
         divLeft.className = "left-content";
-        document.querySelector(".main-content").appendChild(divLeft);
+        divisao.appendChild(divLeft);
 
         //6. Adicione div right-content
         let divRight = document.createElement("div");
         divRight.className = "right-content";
-        document.getElementsByClassName("main-content")[0].appendChild(divRight);
+        divisao.appendChild(divRight);
 
         //7. Adicione imagem
         let imagem = document.createElement("img");
         imagem.src = "https://picsum.photos/200";
         imagem.className = "small-image";
-        document.querySelector(".left-content").appendChild(imagem);
+        divLeft.appendChild(imagem);
 
         //8. Adicione uma lista não ordenada
         let lista = document.createElement("ul");
@@ -119,24 +119,24 @@
         item9.innerHTML = "nove";
         item10.innerHTML = "dez";
         document.querySelector(".right-content").appendChild(lista);
-        document.getElementsByClassName("right-content")[0].firstChild.appendChild(item1);
-        document.getElementsByClassName("right-content")[0].firstChild.appendChild(item2);
-        document.getElementsByClassName("right-content")[0].firstChild.appendChild(item3);
-        document.getElementsByClassName("right-content")[0].firstChild.appendChild(item4);
-        document.getElementsByClassName("right-content")[0].firstChild.appendChild(item5);
-        document.getElementsByClassName("right-content")[0].firstChild.appendChild(item6);
-        document.getElementsByClassName("right-content")[0].firstChild.appendChild(item7);
-        document.getElementsByClassName("right-content")[0].firstChild.appendChild(item8);
-        document.getElementsByClassName("right-content")[0].firstChild.appendChild(item9);
-        document.getElementsByClassName("right-content")[0].firstChild.appendChild(item10);
+        divRight.firstChild.appendChild(item1);
+        divRight.firstChild.appendChild(item2);
+        divRight.firstChild.appendChild(item3);
+        divRight.firstChild.appendChild(item4);
+        divRight.firstChild.appendChild(item5);
+        divRight.firstChild.appendChild(item6);
+        divRight.firstChild.appendChild(item7);
+        divRight.firstChild.appendChild(item8);
+        divRight.firstChild.appendChild(item9);
+        divRight.firstChild.appendChild(item10);
 
         //9. Adicione 3 tags h3
         let title1 = document.createElement("h3");
         let title2 = document.createElement("h3");
         let title3 = document.createElement("h3");
-        document.querySelector(".main-content").appendChild(title1);
-        document.querySelector(".main-content").appendChild(title2);
-        document.querySelector(".main-content").appendChild(title3);
+        divisao.appendChild(title1);
+        divisao.appendChild(title2);
+        divisao.appendChild(title3);
     </script>
 </body>
 
