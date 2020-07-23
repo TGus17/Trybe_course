@@ -63,8 +63,12 @@
 
       let divisao = document.createElement("div");
       divisao.className = "main-content";
-
+      divisao.id = "divMain";
       document.body.appendChild(divisao);
+
+      let divCenter = document.createElement("div");
+      divCenter.className = "center-content";
+      document.getElementById("divMain").appendChild(divCenter);
     </script>
   </body>
 </html>
