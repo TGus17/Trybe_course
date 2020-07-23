@@ -69,6 +69,10 @@
       let divCenter = document.createElement("div");
       divCenter.className = "center-content";
       document.getElementById("divMain").appendChild(divCenter);
+
+      let paragraph = document.createElement("p");
+      paragraph.innerHTML = "Aqui um texto de teste.";
+      document.getElementsByClassName("center-content")[0].appendChild(paragraph);
     </script>
   </body>
 </html>
