@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset=utf-8 />
+	<title>Calculator</title>
+</head>
+
+<body>
+
+	<label>Square this number:
+		<input type="number" id="square-input" size="2">
+	</label>
+	<button id="square-button">Calculate</button>
+	<br><br>
+
+	<label>Half this number:
+		<input type="number" id="half-input" size="2">
+	</label>
+	<button id="half-button">Calculate</button>
+	<br><br>
+
+	<label>
+		Fraction:
+		<input type="number" id="percent1-input" size="2">
+	</label>
+	<label>
+		Whole:
+		<input type="number" id="percent2-input" size="2">
+	</label>
+	<button id="percent-button">Calculate</button>
+	<br><br>
+
+	<label>Calculate area of circle with radius:
+		<input type="number" id="area-input" size="2">
+	</label>
+	<button id="area-button">Calculate</button>
+	<br><br>
+	<div id="solution"></div>
+
+	<script>
+		const quadrado = document.querySelector("#square-input");
+		const metade = document.querySelector("#half-input");
+		const fracao = document.querySelector("#percent1-input");
+		const inteiro = document.querySelector("#percent2-input");
+		const areaCirculo = document.querySelector("#area-input");
+		const solucao = document.querySelector("#solution");
+		const btnQuad = document.querySelector("#square-button");
+		const btnMet = document.querySelector("#half-button");
+		const btnfracao = document.querySelector("#percent-button");
+		const btnArea = document.querySelector("#area-button");
+	
+		// Quadrado
+		btnQuad.addEventListener('click', function () {
+			let resp = quadrado.value * quadrado.value;
+			solucao.innerText = 'The solution of squareNumber is ' + resp;
+		});
+		// Metade
+		btnMet.addEventListener('click', function () {
+			let resp = metade.value / 2;
+			solucao.innerText = 'The solution of halfNumber is ' + resp;
+		});
+		// Fração
+		btnfracao.addEventListener('click', function () {
+			let resp = inteiro.value * fracao.value;
+			solucao.innerText = 'The solution of percentNumber is ' + resp;
+		});
+		// Área Círculo
+		btnArea.addEventListener('click', function () {
+			let resp = areaCirculo.value * areaCirculo.value * Math.PI;
+			solucao.innerText = 'The solution of AreaCircle is ' + resp;
+		});
+	</script>
+
+</body>
+
+</html>
+Add a script tag, and add the functions from the calculator exercise (view the solution if you haven't done it yet).
+For each operation, create an event listener for the button, and when it's clicked, find the value of the appropriate
+input and show the result of the calculation in the solution div.
+Bonus: respond to key presses so that the user doesn't have to click the button.
