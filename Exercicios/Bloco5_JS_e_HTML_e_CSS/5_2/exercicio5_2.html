@@ -57,30 +57,42 @@
   </head>
   <body>
     <script>
+        //1. Adicione h1
       let titulo = document.createElement("h1");
       titulo.innerHTML = "Exercício 5.2 - JavaScript DOM";
       document.body.appendChild(titulo);
 
+      //2. Adicione div main-content
       let divisao = document.createElement("div");
       divisao.className = "main-content";
       divisao.id = "divMain";
       document.body.appendChild(divisao);
 
+      //3. Adicione div center-content
       let divCenter = document.createElement("div");
       divCenter.className = "center-content";
       document.getElementById("divMain").appendChild(divCenter);
 
+      //4. Adicione tag p
       let paragraph = document.createElement("p");
       paragraph.innerHTML = "Aqui um texto de teste.";
       document.getElementsByClassName("center-content")[0].appendChild(paragraph);
 
+      //5. Adicione div lef-content
       let divLeft = document.createElement("div");
       divLeft.className = "left-content";
       document.querySelector(".main-content").appendChild(divLeft);
 
+      //6. Adicione div right-content
       let divRight = document.createElement("div");
       divRight.className = "right-content";
       document.getElementsByClassName("main-content")[0].appendChild(divRight);
+
+      //7. Adicione imagem
+      let imagem = document.createElement("img");
+      imagem.src = "https://picsum.photos/200";
+      imagem.className = "small-image";
+      document.querySelector(".left-content").appendChild(imagem);
     </script>
   </body>
 </html>
