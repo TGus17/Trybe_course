@@ -1,15 +1,52 @@
-//7. Crie uma função que receba uma string word e outra string ending. Verifique se a string ending é o final da string word. Considere que a string ending sempre será menor que a string word.
+//Bônus: (Difícil) Faça um programa que receba uma string em algarismos romanos e retorne o número que a string representa.
 
+function transfRomanos(str) {
+	let valores = [];
+	let soma = 0;
 
-function verificaFimPalavra(word, ending) {
-	let repetido = 0;
-	for (let index = 1; index <= ending.length; index += 1) {
-		if (word[word.length - index] === ending[ending.length - index]) {
-			repetido += 1;
+	let romanos = {
+		I: 1,
+		IV: 4,
+		V: 5,
+		IX: 9,
+		X: 10,
+		XL: 40,
+		L: 50,
+		XC: 90,
+		C: 100,
+		CD: 400,
+		D: 500,
+		CM: 900,
+		M: 1000
+	}
+	for (let i = 0; i < str.length; i += 1) {
+		for (let index in romanos) {
+			if (str[i] == [index]) {
+				valores[i] = romanos[index];
+			}
 		}
 	}
-	if (repetido === ending.length) {
-		return true;
+	if (valores.length == 1) {
+		soma += valores[0];
+		return soma;
 	}
-	return false;
+	else if (valores.length == 2) {
+		if (valores[0] >= valores[1]) {
+			soma = valores[0] + valores[1];
+			return soma;
+		}
+		soma = valores[1] - valores[0];
+		return soma;
+	}
+else {
+	for (let j = 0; j < (valores.length - 1); j += 1) {
+		if (Math.abs(valores[j]) < Math.abs(valores[j + 1])) {
+			valores[j] = valores[j] * (-1);
+		}
+	}
+	for (let index = 0; index < valores.length; index += 1) {
+		soma += valores[index];
+	}
+	return soma;
+}
 }
