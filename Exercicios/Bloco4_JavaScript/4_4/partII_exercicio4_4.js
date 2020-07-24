@@ -1,12 +1,15 @@
-//6. Crie uma função que receba um número inteiro N e retorne o somatório de todos os números de 1 até N.
+//7. Crie uma função que receba uma string word e outra string ending. Verifique se a string ending é o final da string word. Considere que a string ending sempre será menor que a string word.
 
 
-function somatorio(num) {
-	let soma = 0;
-	for (let i = 0; i <= num; i += 1) {
-		soma += i;
+function verificaFimPalavra(word, ending) {
+	let repetido = 0;
+	for (let index = 1; index <= ending.length; index += 1) {
+		if (word[word.length - index] === ending[ending.length - index]) {
+			repetido += 1;
+		}
 	}
-	return soma;
+	if (repetido === ending.length) {
+		return true;
+	}
+	return false;
 }
-
-console.log(somatorio(5));
