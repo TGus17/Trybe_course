@@ -58,12 +58,23 @@
 					alert("R$ Result of!! " + Math.round(gamePrice * discount).toFixed(2));
 				}
 
+				function imgTroca() {
+					let img1 = document.querySelector("#imgover");
+					img1.src = "stomatopoda4.jpeg";
+				}
+
+				function imgTroca2() {
+					let img2 = document.querySelector("#imgover");
+					img2.src = "garras.jpeg";
+				}
 			</script>
 
 			<button onclick="gameFunction()">Calculate the discount here!</button>
+
 			<p>You may want to consider using JavaScript's built in <a href="http://www.w3schools.com/js/js_obj_math.asp"
 					target="_blank">Maths object</a> to round the number you get in your result to a more reasonable one.</p>
 
+				<img id="imgover" onmouseover="imgTroca()" onmouseout="imgTroca2()" src="garras.jpeg">
 
 			<h2>Extensions</h2>
 			<ol>
