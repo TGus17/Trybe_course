@@ -13,16 +13,27 @@
 	<script>
 		let img = document.querySelector("#catImage");
 		img.style.marginLeft = 0;
+		let gatoPraFrente = true;
+
+		let catMove = setInterval(catWalk, 50);
+
+
 
 		function catWalk() {
 			let cat = parseInt(img.style.marginLeft);
-			img.style.marginLeft = cat + 10 + "px";
-			if (cat > (window.innerWidth)) {
-				img.style.marginLeft = 0;
+			if (cat > (window.innerWidth - img.width)) {
+				gatoPraFrente = false;			
 			}
-		}
+			if (cat <= 0) {
+				gatoPraFrente = true;
+			}
 
-		setInterval(catWalk, 50);
+			if (gatoPraFrente) {
+				img.style.marginLeft = cat + 10 + "px";
+			} else {
+				img.style.marginLeft = cat - 10 + "px";
+			}
+		}		
 	</script>
 
 </body>
