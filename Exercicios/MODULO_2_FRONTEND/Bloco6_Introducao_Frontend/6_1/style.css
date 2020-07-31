@@ -1,0 +1,16 @@
+body {
+  text-align: center;
+  background-color: white;  
+  border-radius: 3px;
+  width: 80%;
+  margin: 40px 0;
+  padding: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+fieldset {
+  background-color: rgb(246 , 247 , 248);
+  border: 2px solid rgb(214 , 217 , 220);
+  padding: 15px;
+  text-align: left;
+}
