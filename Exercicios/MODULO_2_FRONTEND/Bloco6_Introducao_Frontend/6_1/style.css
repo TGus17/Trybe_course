@@ -11,6 +11,9 @@ body {
 fieldset {
   background-color: rgb(246 , 247 , 248);
   border: 2px solid rgb(214 , 217 , 220);
-  padding: 15px;
   text-align: left;
+}
+
+.field {
+  margin: 20px;
 }
