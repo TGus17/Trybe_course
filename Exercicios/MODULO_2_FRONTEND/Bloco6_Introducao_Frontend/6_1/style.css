@@ -18,3 +18,7 @@ fieldset {
 .field {
   margin: 20px 20px;
 }
+
+.buttons {
+  display: inline;
+}
