@@ -12,51 +12,61 @@
     <h1>Formulário</h1>
     <h2>Preencha o formulário com as informações pedidas:</h2>
   </header>
-  <fieldset>
-    <legend>Dados Pessoais</legend>
+  <form id="form-curriculo" action="#">
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+      <div class="field">
+        <label for="name">Nome </label>
+        <input type="text" id="name" name="name" placeholder='Digite seu nome' autofocus maxlength="40" required>
+      </div>
+      <div class="field">
+        <label for="email">E-mail </label>
+        <input type="text" id="email" name="email" placeholder='Digite seu e-mail' maxlength="50" required>
+      </div>
+      <div class="field">
+        <label for="cpf">CPF </label>
+        <input type="text" id="cpf" name="cpf" placeholder='Digite seu CPF' maxlength="11" required>
+      </div>
+      <div class="field">
+        <label for="state">Estado </label>
+        <select id="state" name="state" required>
+        </select>
+      </div>
+      <div class="field">
+        <fieldset>
+          <legend>Tipo de Moradia</legend>
+          <input type="radio" id="house" name="type-house" required>
+          <label for="house">Casa </label>
+          <input type="radio" id="apartment" name="type-house" required>
+          <label for="apartment">Apartamento </label>
+        </fieldset>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Dados Último Emprego</legend>
+      <div class="field">
+        <p>Faça um resumo do seu currículo: </p>
+        <textarea id="curriculum" name="curriculum" maxlength="1000" rows="10" cols="50"
+          required>Escreva em, no máximo, 1000 caracteres.</textarea>
+      </div>
+      <div class="field">
+        <label for="cargo">Cargo </label>
+        <input type="text" id="cargo" name="cargo" placeholder='Digite seu cargo' maxlength="40" required>
+      </div>
+      <div class="field">
+        <label for="desCargo">Descrição do Cargo </label>
+        <input type="text" id="desCargo" name="desCargo" placeholder='Descreva seu cargo' size="60" maxlength="500"
+          required>
+      </div>
+      <div class="field">
+        <label for="date">Data de Início </label>
+        <input type="text" id="date" name="date" placeholder='dd/mm/aaaa' required>
+      </div>
+    </fieldset>
     <div class="field">
-      <label for="name">Nome </label>
-      <input type="text" id="name" name="name" placeholder='Digite seu nome' autofocus maxlength="40" required>
+      <input type="submit" id="submit" value='Enviar'>
     </div>
-    <div class="field">
-      <label for="email">E-mail </label>
-      <input type="text" id="email" name="email" placeholder='Digite seu e-mail' maxlength="50" required>
-    </div>
-    <div class="field">
-      <label for="cpf">CPF </label>
-      <input type="text" id="cpf" name="cpf" placeholder='Digite seu CPF' maxlength="11" required>
-    </div>
-    <div class="field">
-      <label for="state">Estado </label>
-      <select id="state" name="state" required>
-      </select>
-    </div>
-    <div class="field">
-      <fieldset>
-        <legend>Tipo de Moradia</legend>
-        <input type="radio" id="house" name="type-house" required>
-        <label for="house">Casa </label>
-        <input type="radio" id="apartment" name="type-house" required>
-        <label for="apartment">Apartamento </label>
-      </fieldset>      
-    </div>
-  </fieldset>
-  <fieldset>
-    <legend>Dados Último Emprego</legend>
-    <div class="field">
-      <p>Faça um resumo do seu currículo: </p>    
-      <textarea id="curriculum" name="curriculum" maxlength="1000" rows="10" cols="50" required>Escreva em, no máximo, 1000 caracteres.</textarea>
-    </div>
-    <div class="field">
-      <label for="cargo">Cargo </label>
-      <input type="text" id="cargo" name="cargo" placeholder='Digite seu cargo' maxlength="40" required>
-    </div>
-    <div class="field">
-      <label for="desCargo">Descrição do Cargo </label>
-      <input type="text" id="desCargo" name="desCargo" placeholder='Descreva seu cargo' size="60" maxlength="500" required>
-    </div>
-
-  </fieldset>
+  </form>
   <script type="text/javascript" src="script.js"></script>
 </body>
 
