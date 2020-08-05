@@ -1,7 +1,8 @@
 #pond {
   display: flex;
+  align-items: flex-start;
 }
 
-.red {
-order: -1;
+.yellow {
+align-self: flex-end;
 }
