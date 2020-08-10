@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel='stylesheet' href='style/bulma.min.css'>
+  <link rel='stylesheet' href='style/style.css'>
+  <title>Formulário de Cadastro</title>
+</head>
+
+<body>
+  <header>
+    <h1 class="title is-1 is-spaced">Formulário</h1>
+    <h2 class="subtitle is-2 is-spaced">Preencha o formulário com as informações pedidas:</h2>
+  </header>
+  <form id="form-curriculo" action="#">    
+      <p class="subtitle is-4">Dados Pessoais</p>
+
+      <div class="field">
+        <label class="label" for="name">Nome </label>
+        <div class="control">
+          <input class="input" type="text" id="name" name="name" placeholder='Digite seu nome' autofocus maxlength="40"
+            required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label" for="email">E-mail </label>
+        <div class="control has-icons-left has-icons-right">
+          <input class="input" type="text" id="email" name="email" placeholder='Digite seu e-mail' maxlength="50" required>
+          <!-- <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fas fa-exclamation-triangle"></i>
+          </span> -->
+          <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fas fa-check"></i>
+          </span>
+        </div>
+        <!-- <p class="help is-danger">This email is invalid</p> -->
+        <!-- <p class="help is-success">This email is available</p> -->
+      </div>
+
+      <div class="field">
+        <label class="label" for="cpf">CPF </label>
+        <div class="control">
+          <input class="input" type="text" id="cpf" name="cpf" placeholder='Digite seu CPF' maxlength="11" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label" for="state">Estado </label>
+        <div class="control">
+          <div class="select">
+            <select id="state" name="state" required></select>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Tipo de Moradia</label>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" id="house" name="type-house" required> Casa
+          </label>
+          <label class="radio">
+            <input type="radio" id="apartment" name="type-house" required> Apartamento
+          </label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Faça um resumo do seu currículo:</label>
+        <div class="control">
+          <textarea class="textarea" id="curriculum" name="curriculum" maxlength="1000" rows="10" cols="50"
+            placeholder="Escreva em, no máximo, 1000 caracteres." required></textarea>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label" for="cargo">Cargo</label>
+        <div class="control">
+          <input class="input" type="text" id="cargo" name="cargo" placeholder='Digite seu cargo' maxlength="40"
+            required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label" for="desCargo">Descrição do Cargo</label>
+        <div class="control">
+          <input class="input" type="text" id="desCargo" name="desCargo" placeholder='Descreva seu cargo' required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label" for="date">Data de Início</label>
+        <div class="control">
+          <input class="input" type="text" id="date" name="date" placeholder='dd/mm/aaaa' required>
+        </div>
+      </div>
+
+
+      <div class="field is-grouped">
+        <div class="control">
+          <input class="button is-link" type="submit" id="submit" value='Enviar'>
+        </div>
+        <div class="control">
+          <input class="button is-link is-light" type="reset" value="Limpar Dados">
+        </div>
+      </div>
+
+  </form>
+  <div id="show-datas" class="field"></div>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
