@@ -18,7 +18,6 @@ const lesson3 = {
   turno: 'noite',
 };
 
-const changeProperty = (obj, chave, value) => {
-obj[chave] = value;
-return obj;
+const listObj = (obj) => {
+  return Object.keys(obj);
 }
