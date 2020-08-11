@@ -19,7 +19,7 @@ const lesson3 = {
 };
 
 const change = (obj) => {
- return Object.keys(obj).length
+ return Object.values(obj);
 }
 
 console.log(change(lesson2));
