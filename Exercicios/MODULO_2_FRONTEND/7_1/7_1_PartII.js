@@ -1,11 +1,18 @@
-const botao = document.querySelector('#click-count');
-const field = document.querySelector('#field');
-let clickCount = 0;
+let func = (str) => {
+  sentence = 'Gustavo x demais';
+  sentence = sentence.split(' ');
+  let phrase = '';
 
-let click = () => field.innerHTML = `You have click me ${clickCount} times`;
-click();
+  for (let index = 0; index < sentence.length; index += 1) {
+    if (sentence[index] === 'x') {
+      sentence[index] = str;
+    }
+  }
 
-botao.addEventListener('click', () => {
-  clickCount += 1;
-  field.innerHTML = `You have click me ${clickCount} times`;
-})
+  for (let index = 0; index < sentence.length; index += 1) {
+    phrase += `${sentence[index]} `;
+  }
+
+  return phrase;
+}
+
