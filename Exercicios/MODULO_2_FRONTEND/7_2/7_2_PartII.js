@@ -20,19 +20,16 @@ const lesson3 = {
 
 lesson2.turno = "noite";
 
-let l1 = {};
-let l2 = {};
-let l3 = {};
-let allLessons = {};
-
-l1.lesson1 = lesson1;
-l2.lesson2 = lesson2;
-l3.lesson3 = lesson3;
-
-Object.assign(allLessons, l1, l2, l3);
-
-const soma = (obj) => {
-  return obj.lesson1.numeroEstudantes + obj.lesson2.numeroEstudantes + obj.lesson3.numeroEstudantes;
+const position = (obj, pos) => {
+  if (pos === 0) {
+    return obj['materia'];
+  } else if (pos === 1) {
+    return obj['numeroEstudantes'];
+  } else if (pos === 2) {
+    return obj['professor'];
+  }
+  return obj['turno'];
+  
 }
 
-console.log(soma(allLessons))
+console.log(position(lesson2, 2));
