@@ -18,8 +18,17 @@ const lesson3 = {
   turno: 'noite',
 };
 
-const change = (obj) => {
- return Object.values(obj);
-}
+lesson2.turno = "noite";
 
-console.log(change(lesson2));
+let l1 = {};
+let l2 = {};
+let l3 = {};
+let allLessons = {};
+
+l1.lesson1 = lesson1;
+l2.lesson2 = lesson2;
+l3.lesson3 = lesson3;
+
+Object.assign(allLessons, l1, l2, l3);
+
+console.log(allLessons);
