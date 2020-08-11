@@ -1,14 +1,13 @@
-let fatorial = (number) => {
-  let resp = 1;
-  if (number < 0) {
-    return ('Valor inválido para operação');
-  } else if (number === 0) {
-    return 1;
+let longestWord = (frase) => {
+  frase = frase.split(' ');
+  let tamanho = 0;
+  let bigWord = '';
+  
+  for (let index = 0; index < frase.length; index += 1) {
+    if (frase[index].length > tamanho) {
+      tamanho = frase[index].length;
+      bigWord = frase[index]
+    }
   }
-  for (let index = 1; index <= number; index += 1) {
-    resp *= index;
-  }
-  return resp;
+  return bigWord;
 }
-
-console.log(fatorial(6));
