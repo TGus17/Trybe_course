@@ -19,5 +19,5 @@ const lesson3 = {
 };
 
 const listObj = (obj) => {
-  return Object.keys(obj);
+  return Object.values(obj);
 }
