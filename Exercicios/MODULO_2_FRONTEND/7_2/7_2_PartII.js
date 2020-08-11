@@ -31,4 +31,8 @@ l3.lesson3 = lesson3;
 
 Object.assign(allLessons, l1, l2, l3);
 
-console.log(allLessons);
+const soma = (obj) => {
+  return obj.lesson1.numeroEstudantes + obj.lesson2.numeroEstudantes + obj.lesson3.numeroEstudantes;
+}
+
+console.log(soma(allLessons))
