@@ -18,6 +18,8 @@ const lesson3 = {
   turno: 'noite',
 };
 
-const listObj = (obj) => {
-  return Object.values(obj);
+const change = (obj) => {
+ return Object.keys(obj).length
 }
+
+console.log(change(lesson2));
