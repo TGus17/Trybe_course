@@ -1,8 +1,6 @@
 const assert = require('assert');
 
-const sum = (a, b) => {
-  return a + b;
-}
+const names1 = ['João', 'Maria', 'Gustavo', 'Samara'];
+const names2 = ['João', 'Marias', 'Gustavo', 'Samara'];
 
-const expected = sum(2,2);
-assert.equal(expected, 4, 'two plus two equals 4');
+assert.notDeepEqual(names1, names2, 'Theese two are the same');
