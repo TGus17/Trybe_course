@@ -1,9 +1,10 @@
-## Repositório de exercícios
+# Repositório de exercícios
 
 #### Esse repositório tem o intuito de listar os exercício ordenados por blocos e conteúdos feitos no curso da Trybe
 
 <hr>
 
+## MÓDULO 1 - INTRODUÇÃO AO DESENVOLVIMENTO WEB
 ### Bloco 1: ShellScript ✅
 <ul>
   <li>1_5: ShellScripts</li>
