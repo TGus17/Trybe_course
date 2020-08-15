@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Exercício 5.1</title>
+
+	<style>
+		div {
+			border-color: black;
+			border-style: solid;
+		}
+
+		.title {
+			text-align: center;
+		}
+
+		.main-content {
+			background-color: yellow;
+		}
+
+		.main-content .center-content {
+			background-color: red;
+			width: 50%;
+			margin: 0 auto;
+		}
+
+		.main-content .center-content p {
+			font-style: italic;
+		}
+	</style>
+</head>
+
+<body>
+	<h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+	<div class="main-content">
+		<div class="center-content">
+			<p>Texto padrão do nosso site</p>
+			<p id="texto">-----</p>
+			<p>Trybe</p>
+		</div>
+	</div>
+	<script>
+		/*
+		Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
+		- document.getElementById()
+		- document.getElementsByClassName()
+		- document.getElementsByTagName()
+		1. Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício) - DONE!
+
+		2. Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)). - DONE!
+
+		3. Crie uma função que mude a cor do quadrado vermelho para branco. - DONE!
+
+		4. Crie uma função que corrija o texto da tag <h1>. - DONE!
+
+		5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+		6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+		*/
+
+		function trocaTexto() {
+			document.getElementById("texto").innerHTML = "Daqui a 2 anos estarei formado e trabalhando naquilo que amo.";
+		}
+		trocaTexto();
+
+		function trocaCor() {
+			let square = document.getElementsByClassName("main-content")[0];
+			square.style.background = "rgb(76 , 164 , 109)";
+		}
+		trocaCor();
+
+		function quadradoVermelho() {
+			let vermelho = document.getElementsByClassName("center-content")[0];
+			vermelho.style.background = "white";
+		}
+		quadradoVermelho();
+
+		function titleCorrect() {
+			let titulo = document.getElementsByClassName("title")[0];
+			titulo.innerHTML = "Exercício 5.1 - JavaScript"
+		}
+		titleCorrect();
+
+		function trocaP() {
+			let maiusculo = document.getElementsByTagName("p")[1];
+			maiusculo.innerHTML = maiusculo.innerHTML.toUpperCase();
+		}
+		trocaP();
+
+		function showP () {
+			let paragraph = document.getElementsByTagName("p")[0];
+			for (let index = 0; index < paragraph.length; index =+ 1) {
+				console.log (paragraph[index].innerHTML);
+			}
+		}
+		showP();
+
+	</script>
+</body>
+
+</html>
