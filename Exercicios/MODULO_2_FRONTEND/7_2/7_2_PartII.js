@@ -18,9 +18,18 @@ const lesson3 = {
   turno: 'noite',
 };
 
-const verifyPair = (obj, key, value) => {
-  if (obj[key] === value) {
-    return true
+const alunosMatematicaEmCadaObject = (obj) => {
+  if (obj.materia === 'Matemática') {
+    return obj.numeroEstudantes;
   }
-  return false;
+  return 0;  
 }
+
+const totalAlunosMatematica = () => {
+const alunosLesson1 = alunosMatematicaEmCadaObject(lesson1);
+const alunosLesson2 = alunosMatematicaEmCadaObject(lesson2);
+const alunosLesson3 = alunosMatematicaEmCadaObject(lesson3);
+return alunosLesson1 + alunosLesson2 + alunosLesson3;
+}
+
+console.log(totalAlunosMatematica());
