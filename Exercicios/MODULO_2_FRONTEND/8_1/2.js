@@ -1,5 +1,4 @@
 const assert = require('assert');
-const { measureMemory } = require('vm');
 
 const books = [
   {
@@ -64,11 +63,17 @@ const books = [
   },
 ];
 
-function authorBornIn1947() {
-  const resp = books.find((name) => name.author.birthYear === 1947);
-  return resp.author.name;
+function smallerName() {
+  let nameBook;
+  let menorNome = 100;
+  books.forEach((element) => {
+    const author = element.name;
+    if (author.length < menorNome) {
+      nameBook = author;
+      menorNome = author.length;
+    }
+  })
+  return nameBook;
 }
 
-assert.equal(authorBornIn1947(), 'Stephen King');
-
-
+assert.equal(smallerName(), 'Duna');
