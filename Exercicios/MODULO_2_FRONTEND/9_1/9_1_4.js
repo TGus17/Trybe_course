@@ -14,11 +14,11 @@ const greet = (temperature) => console.log(`Hi there! Curiosity here. Right now 
 
 const handleError = (errorReason) => console.log(`Error getting temperature: ${errorReason}`);
 
-const sendMarsTemperature = (callback1, callback2) => {
+const sendMarsTemperature = (onSuccess, onError) => {
   const probabilidy = (Math.random() * 100) > 60;
   const temperature = getMarsTemperature();
 
-  probabilidy ? callback1(temperature) : callback2('Robot is busy');
+  probabilidy ? onSuccess(temperature) : onError('Robot is busy');
 }
 
 
