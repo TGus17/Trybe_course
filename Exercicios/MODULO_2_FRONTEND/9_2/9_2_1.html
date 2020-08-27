@@ -3,33 +3,13 @@
 
 <head>
   <title>Best jokes ever</title>
-  <script src="apiScript.js"></script>
+  <script src="9_2_2.js"></script>
 </head>
 
 <body>
   <h1>Get ready for a great joke!</h1>
   <h2 id="jokeContainer"></h2>
 
-  <script>    
-
-    function appendJoke(joke) {
-      const text = document.querySelector('#jokeContainer');
-      text.innerHTML = joke;
-    }
-
-    const fetchJoke = () => {
-      const API_URL = 'https://icanhazdadjoke.com/';
-      const myObject = {
-        method: 'GET',
-        headers: { 'Accept': 'application/json' }
-      };      
-      fetch(API_URL, myObject)
-        .then(response => response.json())
-        .then(data => appendJoke(data.joke));
-    };
-
-    window.onload = () => fetchJoke();
-  </script>
 </body>
 
 </html>
