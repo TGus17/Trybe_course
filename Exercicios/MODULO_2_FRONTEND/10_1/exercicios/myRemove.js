@@ -11,5 +11,3 @@ function myRemove(arr, item) {
 }
 
 module.exports = myRemove;
-
-console.log(myRemove([1, 2, 3, 4], 5));
