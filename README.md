@@ -41,6 +41,27 @@
   <li>6_1: HTML e CSS - Forms</li>
   <li>6_3: CSS Flexbox - PartI</li>
   <li>6_4: CSS Flexbox - PartII</li>
+  <li>6_5: CSS Responsive - Mobile First</li>
 </ul>
 
+### Bloco 7: JAVASCRIPT ES6 ✅
+<ul>
+  <li>7_1: Let, Const, Arrow Functions, Template Literals</li>
+  <li>7_2: Objects</li>
+  <li>7_3: Testes Unitários em JS</li>
+</ul>
+
+### Bloco 8: HOF's ✅
+<ul>
+  <li>8_1: forEach, find, some, every e sort</li>
+  <li>8_2: map e filter</li>
+  <li>8_3: reduce</li>
+  <li>8_4: Spread Operator, rest, Destructuring</li>
+</ul>
+
+### Bloco 9: Javascript Assíncrono ✅
+<ul>
+  <li>9_1: Callbacks</li>
+  <li>9_2: Promises</li>
+</ul>
 <hr>
