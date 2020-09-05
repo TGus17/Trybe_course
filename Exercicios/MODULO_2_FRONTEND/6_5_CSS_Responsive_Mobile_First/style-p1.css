@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.centro {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  background: #333;
+}
+
+.topo {
+  height: 60%;
+  width: 100%;
+  background-color: #f00;
+}
+
+.abaixo {
+  background-color: lime;
+  height: 50%;
+  width: 80%;
+}
