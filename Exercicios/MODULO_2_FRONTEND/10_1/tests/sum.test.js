@@ -1,4 +1,4 @@
-const sum = require('../exercicios/10_1_1');
+const sum = require('../exercicios/sum');
 
 describe('A função sum', () => {
   it('Deve retornar 9, quando passado 4 e 5', () => {
