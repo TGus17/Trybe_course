@@ -9,3 +9,5 @@ test('Número aleatório', () => {
   expect(randomNumber).toHaveBeenCalled();
   expect(randomNumber).toHaveBeenCalledTimes(1);
 });
+
+module.exports = randomNumber;
