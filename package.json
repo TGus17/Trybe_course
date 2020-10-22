@@ -2,8 +2,10 @@
   "scripts": {
     "test": "jest"
   },
-  
   "devDependencies": {
     "jest": "^26.4.2"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2"
   }
 }
