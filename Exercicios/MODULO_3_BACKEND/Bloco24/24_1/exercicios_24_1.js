@@ -41,3 +41,16 @@ db.movies.update(
     }
   }
 );
+
+// Exercício 5 : Aumente em 5 o budget do filme Home Alone .
+
+db.movies.update(
+  {
+    title: "Home Alone",
+  },
+  {
+    $inc: {
+      budget: 5,
+    }
+  }
+);
