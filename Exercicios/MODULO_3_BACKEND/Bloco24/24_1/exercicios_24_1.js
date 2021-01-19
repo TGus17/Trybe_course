@@ -5,3 +5,12 @@ db.movies.updateMany(
   { $set: {
     imdbRating: 7.7
   }});
+
+  // Exercício 2 : Altere budget para 1 no filme Godzilla .
+
+  db .movies.updateMany(
+    { title: "Godzilla" },
+    { $set: {
+      budget: 1,
+    }}
+  );
