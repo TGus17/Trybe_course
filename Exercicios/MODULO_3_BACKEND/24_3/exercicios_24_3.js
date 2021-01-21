@@ -190,3 +190,11 @@ db.movies.find(
     $text: { $search: "vacation" },
   }
 );
+
+// 22. Utilizando o operador $text , busque por filmes que contenham os termos "monstrous" e "monstrous" .
+
+db.movies.find(
+  {
+    $text: { $search: "monstrous monstrous" },
+  }
+);
