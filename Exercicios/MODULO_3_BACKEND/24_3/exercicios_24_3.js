@@ -78,3 +78,11 @@ db.movies.find(
 }, {
   ratings: 1, category: 1, title: 1,
 });
+
+// 10. Retorne somente o título de todos os filmes com dois elementos no array category .
+
+
+db.movies.find(
+  { category: { $size: 2 } },
+  { title: 1 },
+);
