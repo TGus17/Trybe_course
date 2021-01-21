@@ -17,7 +17,17 @@ db.movies.find(
 db.movies.updateMany(
   { title: "Batman" },
   { $push: {
-    ratings: { $each: [85, 100, 102, 105]}
+    ratings: { $each: [85, 100, 102, 105] }
+  }},
+  { upsert: true },
+);
+
+// 4. Adicione um array chamado ratings ao filme Godzilla com os seguintes valores: [78, 52, 95, 102] .
+
+db.movies.updateMany(
+  { title: "Godzilla" },
+  { $push: {
+    ratings: { $each: [78, 52, 95, 102] }
   }},
   { upsert: true },
 );
