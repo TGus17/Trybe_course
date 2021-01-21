@@ -138,6 +138,35 @@ db.movies.updateOne(
     },
     {
       arrayFilters: [{ "item.actor": "Daniel Stern" }]
-    });
+  });
 
-  
+// Exercício 10: Crie um array de documentos chamado cast para o filme Batman com os seguintes dados:
+/* {
+"character": "Batman"
+},
+{
+  "character": "Alfred"
+},
+{
+  "character": "Coringa"
+} */
+
+db.movies.updateMany(
+  { title: "Batman" },
+  {
+    $push: {
+      cast: { $each: [
+        {
+        "character": "Batman"
+        },
+        {
+          "character": "Alfred"
+        },
+        {
+          "character": "Coringa"
+        }
+      ]}
+    }
+  },
+  { upsert: true }
+);
