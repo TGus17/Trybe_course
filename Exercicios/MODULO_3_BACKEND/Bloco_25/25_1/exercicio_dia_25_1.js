@@ -100,3 +100,35 @@ db.vendas.aggregate([
   { $sort: { total: -1 } },
   { $limit: 5 },
 ]);
+
+// Exercício 9 : Descubra quais são os 10 clientes que gastaram o maior valor no ano de 2019 .
+
+db.vendas.aggregate([
+  { $match: {
+    $and: [
+      { status: { $in: ["EM SEPARACAO", "ENTREGUE"] } },
+      { dataVenda: { $gte: ISODate("2019-01-01"), $lte: ISODate("2019-12-31") } },
+    ],
+  }},
+  { $group: {
+    _id: "$clienteId",
+    total: { $sum: "$valorTotal" },
+  }},
+  { $sort: { total: -1 } },
+  { $limit: 10 },
+]);
+
+
+db.vendas.aggregate([
+  { $match:
+      { dataVenda: { $gte: ISODate("2019-01-01"), $lte: ISODate("2019-12-31") } },
+  },
+  { $group: {
+    _id: "$clienteId",
+    total: { $sum: "$valorTotal" },
+  }},
+  { $sort: { total: -1 } },
+  { $limit: 10 },
+]);
+
+
