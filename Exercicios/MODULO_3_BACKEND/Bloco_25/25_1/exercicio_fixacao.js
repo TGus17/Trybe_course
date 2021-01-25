@@ -38,6 +38,8 @@ db.clients.aggregate([
   }},
 ]);
 
+
+
 // // Exercicio Fixação $group
 
 // 1. Selecione todos os bancos; 
