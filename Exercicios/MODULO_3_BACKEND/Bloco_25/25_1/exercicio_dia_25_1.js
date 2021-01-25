@@ -10,7 +10,7 @@ db.clientes.aggregate([
   { $match: { 
     $and: [
       { sexo: "FEMININO" },
-      { dataNascimento: { $gte: ISODate("1995-01-01T00:00:00.0Z"), $lt: ISODate("2006-01-01T00:00:00.000Z")}}
+      { dataNascimento: { $gte: ISODate("1995-01-01"), $lt: ISODate("2006-01-01")}}
     ]
   } }]);
 
@@ -20,7 +20,7 @@ db.clientes.aggregate([
   { $match: { 
     $and: [
       { sexo: "FEMININO" },
-      { dataNascimento: { $gte: ISODate("1995-01-01T00:00:00.0Z"), $lt: ISODate("2006-01-01T00:00:00.000Z")}}
+      { dataNascimento: { $gte: ISODate("1995-01-01"), $lt: ISODate("2006-01-01")}}
     ]},
   },
   {
@@ -43,6 +43,15 @@ db.clientes.aggregate([
 db.clientes.aggregate([
   { $group: {
     _id: "$sexo",
+    total: { $sum: 1 },
+  }},
+]);
+
+// Exercício 6: Agrupe os clientes por sexo e uf . Retorne o total de clientes de cada sexo no campo total .
+
+db.clientes.aggregate([
+  { $group: {
+    _id: { sexo: "$sexo", uf: "$endereco.uf" },
     total: { $sum: 1 },
   }},
 ]);
