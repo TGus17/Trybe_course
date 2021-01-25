@@ -69,3 +69,34 @@ db.clientes.aggregate([
     },
   },
 ]);
+
+// Exercício 8 : Descubra quais são os 5 clientes que gastaram o maior valor.
+
+// db.clientes.aggregate([
+//   { $lookup: {
+//     from: "vendas",
+//     localField: "clienteId",
+//     foreignField:"clienteId",
+//     as: "produtos_comprados",
+//   }},
+//   { $unwind: "$produtos_comprados" },
+//   { $group: { _id: "$nome", totalCompra: { $sum: "$produtos_comprados.valorTotal" } } },
+//   { $sort: { totalCompra: -1 } },
+//   { $limit: 5 },
+//   { $project: { nome: "$nome", totalCompra: 1 } },
+// ]);
+
+db.vendas.aggregate([
+  { $match: {
+    $or: [
+      { status: "EM SEPARACAO" },
+      { status: "ENTREGUE"}
+    ]
+  }},
+  { $group: {
+    _id: "$clienteId",
+    total: { $sum: "$valorTotal" },
+  }},
+  { $sort: { total: -1 } },
+  { $limit: 5 },
+]);
