@@ -1,8 +1,5 @@
 const read = require('readline-sync');
-
-const imc = (peso, altura) => {
-  return (peso/(Math.pow(altura, 2))).toFixed(2);
-;}
+const { imc } = require('./imc');
 
 const comebackResponse = () => {
   const weight = read.questionFloat("Please, digite seu peso: ");
